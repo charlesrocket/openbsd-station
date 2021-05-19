@@ -40,3 +40,4 @@ pkgng_packages:
   - vim
   - wget
   - whois
+  - zsh
