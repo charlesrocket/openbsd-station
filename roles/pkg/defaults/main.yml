@@ -33,6 +33,7 @@ pkgng_packages:
   - pwgen
   - rkhunter
   - sshpass
+  - sudo
   - tmux
   - tig
   - unzip
