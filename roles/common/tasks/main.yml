@@ -4,38 +4,31 @@
   pkgng:
     name: "*"
     state: latest
+  become: True
 
-- name: Install MOTD
+- name: Copy MOTD
   copy:
     src: motd.sh
     dest: /etc/motd.sh
     owner: root
-    mode: 0555
+    mode: 0755
   become: True
-  register: motd
 
-- name: Update MOTD
-  shell:
-    cmd: ./motd.sh > /etc/motd
-  args:
-    chdir: /etc
+- name: Install MOTD
+  cron:
+    name: "Update MOTD"
+    special_time: reboot
+    job: "/etc/motd.sh > /etc/motd.template"
+    user: root
+    state: present
   become: True
-  when: motd.changed
 
 - name: Edit shell prompt
   lineinfile:
     dest: /home/{{ ansible_user_id }}/.shrc
     line: 'export PS1="\u@\H x: "'
     owner: "{{ ansible_user_id }}"
-
-- name: Tune GPG
-  lineinfile:
-    dest: /home/{{ ansible_user_id }}/.shrc
-    line: "{{ item }}"
-    owner: "{{ ansible_user_id }}"
-  with_items:
-    - "GPG_TTY=$(tty)"
-    - "export GPG_TTY"
+    state: present
 
 - name: Install ohmyzsh
   shell:
@@ -43,9 +36,3 @@
   args:
     creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
   register: ohmyzsh
-
-- name: Change default shell to zsh
-  user:
-    name: "{{ ansible_user_id }}"
-    shell: /bin/zsh
-  when: ohmyzsh.changed
