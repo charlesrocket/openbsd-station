@@ -1,0 +1,41 @@
+---
+
+pkgng_state: present
+
+pkgng_packages:
+  - bash
+  - bzip2
+  - chkrootkit
+  - clamav
+  - curl
+  - diffutils
+  - direnv
+  - exfat-utils
+  - fdupes
+  - figlet
+  - gawk
+  - gcc
+  - git
+  - gnupg
+  - gzip
+  - htop
+  - httping
+  - iftop
+  - less
+  - lolcat
+  - lynis
+  - mc
+  - netcat
+  - nmap
+  - openssl
+  - p7zip
+  - pv
+  - pwgen
+  - rkhunter
+  - sshpass
+  - tmux
+  - tig
+  - unzip
+  - vim
+  - wget
+  - whois

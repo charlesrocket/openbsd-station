@@ -1,0 +1,29 @@
+---
+
+- name: Upgrade installed packages
+  pkgng:
+    name: "*"
+    state: latest
+
+- name: Install MOTD
+  copy:
+    src: motd.sh
+    dest: /etc/motd
+    owner: root
+    mode: 0755
+  become: True
+
+- name: Edit shell prompt
+  lineinfile:
+    dest: /home/{{ ansible_user_id }}/.shrc
+    line: 'export PS1="\u@\H x: "'
+    owner: "{{ ansible_user_id }}"
+
+- name: Tune GPG
+  lineinfile:
+    dest: /home/{{ ansible_user_id }}/.shrc
+    line: "{{ item }}"
+    owner: "{{ ansible_user_id }}"
+  with_items:
+    - "GPG_TTY=$(tty)"
+    - "export GPG_TTY"
