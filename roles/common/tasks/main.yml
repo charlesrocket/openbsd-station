@@ -8,10 +8,19 @@
 - name: Install MOTD
   copy:
     src: motd.sh
-    dest: /etc/motd
+    dest: /etc/motd.sh
     owner: root
-    mode: 0755
+    mode: 0555
   become: True
+  register: motd
+
+- name: Update MOTD
+  shell:
+    cmd: ./motd.sh > /etc/motd
+  args:
+    chdir: /etc
+  become: True
+  when: motd.changed
 
 - name: Edit shell prompt
   lineinfile:
