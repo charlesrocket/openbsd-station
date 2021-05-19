@@ -27,3 +27,16 @@
   with_items:
     - "GPG_TTY=$(tty)"
     - "export GPG_TTY"
+
+- name: Install ohmyzsh
+  shell:
+    cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  args:
+    creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
+  register: ohmyzsh
+
+- name: Change default shell to zsh
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /bin/zsh
+  when: ohmyzsh.changed
