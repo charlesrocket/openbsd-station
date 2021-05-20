@@ -1,2 +1,2 @@
 #!/bin/sh
-figlet "$(hostname)" | lolcat -f
+figlet "$(hostname)" | lolcat -f && echo
