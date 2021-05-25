@@ -1,6 +1,6 @@
 ---
 
-- name: Ensure apt packages are installed
+- name: Ensure packages are installed
   pkgng:
     state: "{{ pkgng_state }}"
     name: "{{ packages }}"
