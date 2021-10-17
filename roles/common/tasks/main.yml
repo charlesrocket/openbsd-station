@@ -6,6 +6,13 @@
     state: latest
   become: True
 
+- name: Enable sshd
+  community.general.sysrc:
+    name: sshd_enable
+    value: "YES"
+    state: present
+  become: True
+
 - name: Copy MOTD
   copy:
     src: motd.sh
