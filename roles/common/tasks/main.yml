@@ -22,6 +22,22 @@
     path: /boot/loader.conf
   become: True
 
+- name: Enable AHCI
+  community.general.sysrc:
+    name: ahci_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
+- name: Enable aio
+  community.general.sysrc:
+    name: aio_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
 - name: Enable sshd
   community.general.sysrc:
     name: sshd_enable
