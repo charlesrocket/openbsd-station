@@ -38,6 +38,14 @@
     path: /boot/loader.conf
   become: True
 
+- name: Enable H-TCP
+  community.general.sysrc:
+    name: cc_htcp_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
 - name: Enable sshd
   community.general.sysrc:
     name: sshd_enable
