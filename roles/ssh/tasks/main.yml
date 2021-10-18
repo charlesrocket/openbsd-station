@@ -16,6 +16,6 @@
 
 - name: "Ensure SSH is {{ ssh.start | ternary('started','stopped') }}"
   service:
-    name: ssh
+    name: sshd
     state: "{{ ssh.start | ternary('restarted','stopped') }}"
     enabled: "{{ ssh.service_enabled }}"
