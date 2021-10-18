@@ -14,6 +14,14 @@
     path: /boot/loader.conf
   become: True
 
+- name: Enable AES
+  community.general.sysrc:
+    name: aesni_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
 - name: Enable sshd
   community.general.sysrc:
     name: sshd_enable
