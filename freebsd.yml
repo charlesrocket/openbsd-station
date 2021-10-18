@@ -1,7 +1,17 @@
 ---
-
 - name: Freebsd playbook
   hosts: localhost
+
+  vars_files:
+    - default.config.yml
+
+  pre_tasks:
+    - name: Load config.yml
+      include_vars: "{{ item }}"
+      with_fileglob:
+        - "{{ playbook_dir }}/config.yml"
+      tags: ['always']
+
   roles:
     - { role: pkg, become: true }
     - { role: common, become: false }

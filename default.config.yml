@@ -1,7 +1,14 @@
----
+locale: "en_US.UTF-8"
+timezone: "America/Los_Angeles"
+
+ssh:
+  start: true
+  service_enabled: true
+  password_auth: false
+  root_login: false
+
 
 pkgng_state: present
-
 pkgng_packages:
   - bash
   - bzip2
