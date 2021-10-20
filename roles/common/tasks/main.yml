@@ -38,6 +38,13 @@
     path: /boot/loader.conf
   become: True
 
+- name: Clear /tmp
+  community.general.sysrc:
+    name: clear_tmp_enable
+    value: "YES"
+    state: present
+  become: True
+
 - name: Enable H-TCP
   community.general.sysrc:
     name: cc_htcp_load
@@ -46,10 +53,38 @@
     path: /boot/loader.conf
   become: True
 
+- name: Disable sendmail
+  community.general.sysrc:
+    name: sendmail_enable
+    value: "NONE"
+    state: present
+  become: True
+
 - name: Enable sshd
   community.general.sysrc:
     name: sshd_enable
     value: "YES"
+    state: present
+  become: True
+
+- name: Enable Kernel security levels
+  community.general.sysrc:
+    name: kern_securelevel_enable
+    value: "YES"
+    state: present
+  become: True
+
+- name: Set kernel security level
+  community.general.sysrc:
+    name: kern_securelevel
+    value: "2"
+    state: present
+  become: True
+
+- name: Set syslogd flags
+  community.general.sysrc:
+    name: syslogd_flags
+    value: "-ss"
     state: present
   become: True
 
