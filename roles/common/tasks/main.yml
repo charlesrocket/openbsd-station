@@ -6,6 +6,34 @@
     state: latest
   become: True
 
+- name: Hide UIDs
+  sysctl:
+    name: security.bsd.see_other_uids
+    state: present
+    value: '0'
+  become: True
+
+- name: Random IP packet IDs
+  sysctl:
+    name: net.inet.ip.random_id
+    state: present
+    value: '1'
+  become: True
+
+- name: Blackhole 1/2
+  sysctl:
+    name: net.inet.tcp.blackhole
+    state: present
+    value: '2'
+  become: True
+
+- name: Blackhole 2/2
+  sysctl:
+    name: net.inet.udp.blackhole
+    state: present
+    value: '1'
+  become: True
+
 - name: Enable coretemp
   community.general.sysrc:
     name: coretemp_load
