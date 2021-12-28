@@ -7,28 +7,28 @@
   become: True
 
 - name: Hide UIDs
-  sysctl:
+  ansible.posix.sysctl:
     name: security.bsd.see_other_uids
     state: present
     value: '0'
   become: True
 
 - name: Random IP packet IDs
-  sysctl:
+  ansible.posix.sysctl:
     name: net.inet.ip.random_id
     state: present
     value: '1'
   become: True
 
 - name: Blackhole 1/2
-  sysctl:
+  ansible.posix.sysctl:
     name: net.inet.tcp.blackhole
     state: present
     value: '2'
   become: True
 
 - name: Blackhole 2/2
-  sysctl:
+  ansible.posix.sysctl:
     name: net.inet.udp.blackhole
     state: present
     value: '1'
