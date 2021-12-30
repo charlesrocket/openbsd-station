@@ -80,7 +80,7 @@
     value: "YES"
     path: /boot/loader.conf
   become: True
-  
+
 - name: Change loader logo
   community.general.sysrc:
     name: loader_logo
