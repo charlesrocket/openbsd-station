@@ -45,4 +45,5 @@ pkgng_packages:
   - vim
   - wget
   - whois
+  - wireguard
   - zsh
