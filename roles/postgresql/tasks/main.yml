@@ -1,24 +1,17 @@
 ---
 
-- name: Edit login.conf
-  blockinfile:
-    path: /etc/login.conf
-    block: |
-      postgres:\
-         :lang=en_US-UTF8:\
-         :setenv=LC_COLLATE=C:\
-         :tc=default:
-    insertafter: EOF
-    mode: 0644
+- name: Ensure postgresql is installed
+  community.general.pkgng:
     state: present
-
-- name: Edit rc.conf
-  lineinfile:
-    path: /etc/rc.conf
-    line: postgresql_class="postgres"
-    state: present
+    name:
+      - postgresql14-server
+      - postgresql14-client
+    autoremove: True
+    cached: False
+  become: True
 
 - name: Enable postgresql
   community.general.sysrc:
     name: postgresql_enable
+    state: present
     value: "YES"

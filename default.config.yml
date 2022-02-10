@@ -36,7 +36,6 @@ pkgng_packages:
   - nmap
   - openssl
   - p7zip
-  - postgresql14-server
   - pv
   - pwgen
   - rkhunter
