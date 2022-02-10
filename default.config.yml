@@ -2,6 +2,7 @@ locale: "en_US.UTF-8"
 timezone: "America/Los_Angeles"
 
 postgresql: true
+redis: true
 
 ssh:
   start: true

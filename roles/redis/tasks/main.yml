@@ -1,0 +1,14 @@
+---
+
+- name: Ensure redis is installed
+  community.general.pkgng:
+    state: present
+    name: redis
+    autoremove: True
+    cached: False
+
+- name: Enable redis
+  community.general.sysrc:
+    name: redis_enable
+    state: present
+    value: "YES"
