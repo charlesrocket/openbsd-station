@@ -1,0 +1,16 @@
+---
+
+- name: Ensure postgresql is installed
+  community.general.pkgng:
+    state: present
+    name:
+      - postgresql14-server
+      - postgresql14-client
+    autoremove: True
+    cached: False
+
+- name: Enable postgresql
+  community.general.sysrc:
+    name: postgresql_enable
+    state: present
+    value: "YES"

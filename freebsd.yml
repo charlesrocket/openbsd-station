@@ -13,6 +13,13 @@
       tags: ['always']
 
   roles:
-    - { role: pkg, become: true }
-    - { role: common, become: false }
-    - { role: ssh, become: true }
+    - role: pkg
+    - role: postgresql
+      when: postgresql
+      become: True
+    - role: redis
+      when: redis
+      become: True
+    - role: common
+    - role: ssh
+      become: True
