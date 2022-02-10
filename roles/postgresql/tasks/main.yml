@@ -8,7 +8,6 @@
       - postgresql14-client
     autoremove: True
     cached: False
-  become: True
 
 - name: Enable postgresql
   community.general.sysrc:
