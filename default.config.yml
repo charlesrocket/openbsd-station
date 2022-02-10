@@ -1,6 +1,8 @@
 locale: "en_US.UTF-8"
 timezone: "America/Los_Angeles"
 
+postgresql: true
+
 ssh:
   start: true
   service_enabled: true
@@ -34,6 +36,7 @@ pkgng_packages:
   - nmap
   - openssl
   - p7zip
+  - postgresql14-server
   - pv
   - pwgen
   - rkhunter
