@@ -1,0 +1,15 @@
+---
+
+- name: Edit login.conf
+  blockinfile:
+    path: /etc/login.conf
+    block: |
+      postgres:\
+         :lang=en_US-UTF8:\
+         :setenv=LC_COLLATE=C:\
+         :tc=default:
+    insertafter: EOF
+    mode: 0644
+    state: present
+  become: True
+  when: postgresql
