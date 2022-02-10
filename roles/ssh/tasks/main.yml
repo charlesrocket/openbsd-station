@@ -6,6 +6,7 @@
     regexp: "^#PasswordAuthentication"
     line: "PasswordAuthentication {{ ssh.password_auth | ternary('yes','no') }}"
     state: present
+  becone: True
 
 - name: "{{ ssh.root_login | ternary('Allow','Disallow') }} root SSH access"
   lineinfile:
@@ -13,9 +14,11 @@
     regexp: "^#PermitRootLogin"
     line: "PermitRootLogin {{ ssh.root_login | ternary('yes','no') }}"
     state: present
+  becone: True
 
 - name: "Ensure SSH is {{ ssh.start | ternary('started','stopped') }}"
   service:
     name: sshd
     state: "{{ ssh.start | ternary('restarted','stopped') }}"
     enabled: "{{ ssh.service_enabled }}"
+  becone: True
