@@ -15,5 +15,6 @@
   roles:
     - role: pkg
     - role: postgresql
+      when: postgresql
     - role: common
     - role: ssh

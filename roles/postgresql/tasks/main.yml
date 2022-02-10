@@ -12,4 +12,3 @@
     mode: 0644
     state: present
   become: True
-  when: postgresql
