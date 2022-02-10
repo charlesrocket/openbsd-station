@@ -12,3 +12,16 @@
     mode: 0644
     state: present
   become: True
+
+- name: Edit rc.conf
+  lineinfile:
+    path: /etc/rc.conf
+    line: postgresql_class="postgres"
+    state: present
+  become: True
+
+- name: Enable postgresql
+  community.general.sysrc:
+    name: postgresql_enable
+    value: "YES"
+  become: True
