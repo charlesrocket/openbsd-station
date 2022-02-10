@@ -16,5 +16,7 @@
     - role: pkg
     - role: postgresql
       when: postgresql
+      become: True
     - role: common
     - role: ssh
+      become: True
