@@ -4,3 +4,8 @@
 [![Build Status](https://api.cirrus-ci.com/github/charlesrocket/freebsd-server.svg?branch=master)](https://cirrus-ci.com/github/charlesrocket/freebsd-server)
 
 Ansible playbook for **FreeBSD** server
+
+```sh
+curl https://raw.githubusercontent.com/charlesrocket/freebsd-server/master/bootstrap | sh
+```
+🚧
