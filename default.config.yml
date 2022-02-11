@@ -13,6 +13,7 @@ ssh:
 pkgng_packages:
   - bash
   - bzip2
+  - cbsd
   - chkrootkit
   - clamav
   - curl
