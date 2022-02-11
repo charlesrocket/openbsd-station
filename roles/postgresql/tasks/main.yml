@@ -5,6 +5,7 @@
     state: present
     name:
       - postgresql14-server
+      - postgresql14-contrib
       - postgresql14-client
     autoremove: True
     cached: False
