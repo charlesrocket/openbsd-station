@@ -12,8 +12,8 @@ ssh:
 
 pkgng_packages:
   - bash
+  - bastille
   - bzip2
-  - cbsd
   - chkrootkit
   - clamav
   - curl
