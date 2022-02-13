@@ -16,6 +16,7 @@ pkgng_packages:
   - bzip2
   - chkrootkit
   - clamav
+  - crystal
   - curl
   - diffutils
   - direnv
@@ -41,6 +42,7 @@ pkgng_packages:
   - pv
   - pwgen
   - rkhunter
+  - shards
   - sshpass
   - sudo
   - tmux
