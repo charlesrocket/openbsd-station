@@ -4,12 +4,6 @@ timezone: "America/Los_Angeles"
 postgresql: false
 redis: false
 
-ssh:
-  start: true
-  service_enabled: true
-  password_auth: false
-  root_login: false
-
 pkgng_packages:
   - bash
   - bastille
