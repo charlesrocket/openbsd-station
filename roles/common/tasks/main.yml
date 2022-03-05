@@ -34,6 +34,13 @@
     value: '1'
   become: True
 
+- name: Enable microcode updates
+  community.general.sysrc:
+    name: microcode_update_enable
+    value: "YES"
+    state: present
+  become: True
+
 - name: Enable coretemp
   community.general.sysrc:
     name: coretemp_load
