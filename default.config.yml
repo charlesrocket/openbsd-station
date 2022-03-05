@@ -42,7 +42,6 @@ pkgng_packages:
   - tmux
   - tig
   - unzip
-  - vim
   - wget
   - whois
   - wireguard
