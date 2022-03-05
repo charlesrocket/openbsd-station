@@ -12,6 +12,7 @@ pkgng_packages:
   - clamav
   - crystal
   - curl
+  - devcpu-data
   - diffutils
   - direnv
   - exfat-utils
