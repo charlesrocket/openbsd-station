@@ -4,8 +4,8 @@
   community.general.pkgng:
     state: present
     name: redis
-    autoremove: True
-    cached: False
+    autoremove: true
+    cached: false
 
 - name: Enable redis
   community.general.sysrc:

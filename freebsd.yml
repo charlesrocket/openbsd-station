@@ -16,8 +16,8 @@
     - role: pkg
     - role: postgresql
       when: postgresql
-      become: True
+      become: true
     - role: redis
       when: redis
-      become: True
+      become: true
     - role: common

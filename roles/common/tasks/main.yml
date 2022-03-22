@@ -4,42 +4,42 @@
   community.general.pkgng:
     name: "*"
     state: latest
-  become: True
+  become: true
 
 - name: Hide UIDs
   ansible.posix.sysctl:
     name: security.bsd.see_other_uids
     state: present
     value: '0'
-  become: True
+  become: true
 
 - name: Random IP packet IDs
   ansible.posix.sysctl:
     name: net.inet.ip.random_id
     state: present
     value: '1'
-  become: True
+  become: true
 
 - name: Blackhole 1/2
   ansible.posix.sysctl:
     name: net.inet.tcp.blackhole
     state: present
     value: '2'
-  become: True
+  become: true
 
 - name: Blackhole 2/2
   ansible.posix.sysctl:
     name: net.inet.udp.blackhole
     state: present
     value: '1'
-  become: True
+  become: true
 
 - name: Enable microcode updates
   community.general.sysrc:
     name: microcode_update_enable
     value: "YES"
     state: present
-  become: True
+  become: true
 
 - name: Enable coretemp
   community.general.sysrc:
@@ -47,7 +47,7 @@
     state: present
     value: "YES"
     path: /boot/loader.conf
-  become: True
+  become: true
 
 - name: Enable AES
   community.general.sysrc:
@@ -55,7 +55,7 @@
     state: present
     value: "YES"
     path: /boot/loader.conf
-  become: True
+  become: true
 
 - name: Enable AHCI
   community.general.sysrc:
@@ -63,7 +63,7 @@
     state: present
     value: "YES"
     path: /boot/loader.conf
-  become: True
+  become: true
 
 - name: Enable aio
   community.general.sysrc:
@@ -71,14 +71,14 @@
     state: present
     value: "YES"
     path: /boot/loader.conf
-  become: True
+  become: true
 
 - name: Clear /tmp
   community.general.sysrc:
     name: clear_tmp_enable
     value: "YES"
     state: present
-  become: True
+  become: true
 
 - name: Enable H-TCP
   community.general.sysrc:
@@ -86,7 +86,7 @@
     state: present
     value: "YES"
     path: /boot/loader.conf
-  become: True
+  become: true
 
 - name: Change loader logo
   community.general.sysrc:
@@ -94,42 +94,42 @@
     state: present
     value: "beastie"
     path: /boot/loader.conf
-  become: True
+  become: true
 
 - name: Disable sendmail
   community.general.sysrc:
     name: sendmail_enable
     value: "NONE"
     state: present
-  become: True
+  become: true
 
 - name: Enable sshd
   community.general.sysrc:
     name: sshd_enable
     value: "YES"
     state: present
-  become: True
+  become: true
 
 - name: Enable Kernel security levels
   community.general.sysrc:
     name: kern_securelevel_enable
     value: "YES"
     state: present
-  become: True
+  become: true
 
 - name: Set kernel security level
   community.general.sysrc:
     name: kern_securelevel
     value: "2"
     state: present
-  become: True
+  become: true
 
 - name: Set syslogd flags
   community.general.sysrc:
     name: syslogd_flags
     value: "-ss"
     state: present
-  become: True
+  become: true
 
 - name: Copy MOTD
   ansible.builtin.copy:
@@ -137,7 +137,7 @@
     dest: /etc/motd.sh
     owner: root
     mode: 0755
-  become: True
+  become: true
 
 - name: Install MOTD
   ansible.builtin.cron:
@@ -146,7 +146,7 @@
     job: "/etc/motd.sh > /etc/motd.template"
     user: root
     state: present
-  become: True
+  become: true
 
 - name: Edit shell prompt
   ansible.builtin.lineinfile:

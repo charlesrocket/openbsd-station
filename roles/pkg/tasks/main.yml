@@ -4,8 +4,8 @@
   community.general.pkgng:
     state: present
     name: "{{ packages }}"
-    autoremove: True
-    cached: False
+    autoremove: true
+    cached: false
   vars:
     packages: "{{ pkgng_packages }}"
-  become: True
+  become: true
