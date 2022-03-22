@@ -78,12 +78,6 @@
     value: "beastie"
     path: /boot/loader.conf
 
-- name: Disable sendmail
-  community.general.sysrc:
-    name: sendmail_enable
-    value: "NONE"
-    state: present
-
 - name: Enable sshd
   community.general.sysrc:
     name: sshd_enable
