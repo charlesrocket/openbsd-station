@@ -90,14 +90,14 @@
     value: "YES"
     state: present
 
-- name: Set kernel security level
-  community.general.sysrc:
-    name: kern_securelevel
-    value: "2"
-    state: present
-
 - name: Set syslogd flags
   community.general.sysrc:
     name: syslogd_flags
     value: "-ss"
+    state: present
+
+- name: Set kernel security level
+  community.general.sysrc:
+    name: kern_securelevel
+    value: "2"
     state: present
