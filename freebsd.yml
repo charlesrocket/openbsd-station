@@ -14,6 +14,9 @@
 
   roles:
     - role: pkg
+    - role: poudriere
+      when: poudriere
+      become: true
     - role: postgresql
       when: postgresql
       become: true

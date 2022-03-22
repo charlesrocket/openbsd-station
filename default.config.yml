@@ -1,6 +1,7 @@
 locale: "en_US.UTF-8"
 timezone: "America/Los_Angeles"
 
+poudriere: true
 postgresql: false
 redis: false
 
