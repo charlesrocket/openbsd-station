@@ -132,7 +132,7 @@
   become: True
 
 - name: Copy MOTD
-  copy:
+  ansible.builtin.copy:
     src: motd.sh
     dest: /etc/motd.sh
     owner: root
@@ -140,7 +140,7 @@
   become: True
 
 - name: Install MOTD
-  cron:
+  ansible.builtin.cron:
     name: "Update MOTD"
     special_time: reboot
     job: "/etc/motd.sh > /etc/motd.template"
@@ -149,14 +149,14 @@
   become: True
 
 - name: Edit shell prompt
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: /home/{{ ansible_user_id }}/.shrc
     line: 'export PS1="\u@\H x: "'
     owner: "{{ ansible_user_id }}"
     state: present
 
 - name: Install ohmyzsh
-  shell:
+  ansible.builtin.shell:
     cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
   args:
     creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"

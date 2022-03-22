@@ -1,13 +1,13 @@
 ---
 
 - name: Change default shell to zsh
-  user:
+  ansible.builtin.user:
     name: "{{ ansible_user_id }}"
     shell: /bin/zsh
   when: ohmyzsh.changed
 
 - name: Tune GPG
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: /home/{{ ansible_user_id }}/.zshrc
     line: "{{ item }}"
     owner: "{{ ansible_user_id }}"
