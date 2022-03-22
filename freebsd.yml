@@ -21,3 +21,4 @@
       when: redis
       become: true
     - role: common
+    - role: sys
