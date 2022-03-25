@@ -1,0 +1,29 @@
+---
+
+- name: Ensure poudriere is installed
+  community.general.pkgng:
+    state: present
+    name: poudriere
+    autoremove: true
+    cached: false
+
+- name: Ensure nginx is installed
+  community.general.pkgng:
+    state: present
+    name: nginx
+    autoremove: true
+    cached: false
+
+- name: Copy poudriere config
+  ansible.builtin.copy:
+    src: poudriere.conf
+    dest: /usr/local/etc/poudriere.conf
+    owner: root
+    mode: 0644
+
+- name: Copy Nginx config
+  ansible.builtin.copy:
+    src: nginx.conf
+    dest: /usr/local/etc/nginx/nginx.conf
+    owner: root
+    mode: 0644
