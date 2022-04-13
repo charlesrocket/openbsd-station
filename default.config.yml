@@ -43,7 +43,7 @@ pkgng_packages:
   - mc
   - netcat
   - nmap
-  - openssl
+# - openssl
   - p7zip
   - pv
   - pwgen
