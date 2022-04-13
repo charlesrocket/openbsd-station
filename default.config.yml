@@ -45,6 +45,7 @@ pkgng_packages:
   - nmap
 # - openssl
   - p7zip
+  - pam_yubico
   - pv
   - pwgen
   - rkhunter
