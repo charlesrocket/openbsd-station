@@ -12,4 +12,4 @@ task:
     - echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /usr/local/etc/sudoers
     - pw useradd chuck -m -G wheel
     - chown -R chuck:chuck /tmp/freebsd-server
-    - su -l chuck -c 'cd /tmp/freebsd-server && test/idempotence_test'
+    - su -l chuck -c 'cd /tmp/freebsd-server && test/idempotence_test.sh'
