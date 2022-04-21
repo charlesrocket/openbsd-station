@@ -5,6 +5,7 @@
     name: "*"
     state: latest
   become: true
+  when: upgrade_packages
 
 - name: Copy MOTD
   ansible.builtin.copy:
