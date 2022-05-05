@@ -51,6 +51,7 @@ pkgng_packages:
   - pv
   - pwgen
   - rkhunter
+  - rust
   - shards
   - sshpass
   - sudo
