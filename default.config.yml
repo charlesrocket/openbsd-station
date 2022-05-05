@@ -18,7 +18,6 @@ dotfiles_files:
   - .gitconfig
 
 pkgng_packages:
-  - bash
   - bastille
   - bzip2
   - chkrootkit
