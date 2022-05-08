@@ -57,6 +57,7 @@ pkgng_packages:
   - sudo
   - tmux
   - tig
+  - transmission-cli
   - unzip
   - wget
   - whois
