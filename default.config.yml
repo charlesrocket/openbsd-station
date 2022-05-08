@@ -58,6 +58,7 @@ pkgng_packages:
   - tig
   - tmux
   - transmission-cli
+  - transmission-daemon
   - unzip
   - wget
   - whois
