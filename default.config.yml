@@ -55,8 +55,8 @@ pkgng_packages:
   - shards
   - sshpass
   - sudo
-  - tmux
   - tig
+  - tmux
   - transmission-cli
   - unzip
   - wget
