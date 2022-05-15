@@ -26,3 +26,6 @@
     - role: common
     - role: sys
       become: true
+    - role: acct
+      when: accounting
+      become: true
