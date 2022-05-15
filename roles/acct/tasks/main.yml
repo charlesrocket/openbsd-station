@@ -6,7 +6,7 @@
     state: present
     value: "YES"
 
-- name: Start process accounting
+- name: Start process accounting on boot
   ansible.builtin.service:
     name: accounting
-    state: started
+    enabled: true
