@@ -1,0 +1,4 @@
+accounting: true
+poudriere: true
+postgresql: true
+redis: true
