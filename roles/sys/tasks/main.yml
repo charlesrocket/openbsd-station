@@ -1,5 +1,11 @@
 ---
 
+- name: Tune TTYs
+  ansible.builtin.replace:
+    path: /etc/ttys
+    regexp: '(?:^|\W)secure(?:$|\W)'
+    replace: 'insecure'
+
 - name: Hide UIDs
   ansible.posix.sysctl:
     name: security.bsd.see_other_uids
