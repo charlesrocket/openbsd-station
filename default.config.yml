@@ -64,4 +64,3 @@ pkgng_packages:
   - wget
   - whois
   - wireguard
-  - zsh

@@ -30,10 +30,3 @@
     line: 'export PS1="\u@\H x: "'
     owner: "{{ ansible_user_id }}"
     state: present
-
-- name: Install ohmyzsh
-  ansible.builtin.shell:
-    cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-  args:
-    creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
-  register: ohmyzsh
