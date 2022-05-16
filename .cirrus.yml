@@ -6,12 +6,12 @@ task:
 
   install_script: pkg install -y sudo git py38-ansible
 
-  clone_script:
-    - git clone -b ${CIRRUS_BRANCH} https://github.com/charlesrocket/freebsd-server /tmp/freebsd-server
-    - cp /tmp/freebsd-server/test/config.yml /tmp/freebsd-server/config.yml
+  clone_script: |
+    git clone -b ${CIRRUS_BRANCH} https://github.com/charlesrocket/freebsd-server /tmp/freebsd-server
+    cp /tmp/freebsd-server/test/config.yml /tmp/freebsd-server/config.yml
 
-  script:
-    - echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /usr/local/etc/sudoers
-    - pw useradd chuck -m -G wheel
-    - chown -R chuck:chuck /tmp/freebsd-server
-    - su -l chuck -c 'cd /tmp/freebsd-server && test/idempotence_test.sh'
+  script: |
+    echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /usr/local/etc/sudoers
+    pw useradd chuck -m -G wheel
+    chown -R chuck:chuck /tmp/freebsd-server
+    su -l chuck -c 'cd /tmp/freebsd-server && test/idempotence_test.sh'
