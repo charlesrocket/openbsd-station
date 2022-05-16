@@ -18,13 +18,13 @@
     state: present
     value: '1'
 
-- name: Blackhole 1/2
+- name: Blackhole TCP
   ansible.posix.sysctl:
     name: net.inet.tcp.blackhole
     state: present
     value: '2'
 
-- name: Blackhole 2/2
+- name: Blackhole UDP
   ansible.posix.sysctl:
     name: net.inet.udp.blackhole
     state: present
