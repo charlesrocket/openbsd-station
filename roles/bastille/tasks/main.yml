@@ -17,3 +17,9 @@
     name: pf_enable
     value: "YES"
     state: present
+
+- name: Enable bastille
+  community.general.sysrc:
+    name: bastille_enable
+    value: "YES"
+    state: present
