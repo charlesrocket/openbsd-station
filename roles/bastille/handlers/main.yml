@@ -10,4 +10,4 @@
     state: present
 
 - name: Enable loopback interface
-  ansible.builtin.command: service netif cloneup
+  ansible.builtin.command: service netif cloneup # noqa command-instead-of-module
