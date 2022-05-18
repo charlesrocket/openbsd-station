@@ -11,3 +11,9 @@
     - Add loopback interface
     - Set loopback interface name
     - Enable loopback interface
+
+- name: Ensure pf is enabled
+  community.general.sysrc:
+    name: pf_enable
+    value: "YES"
+    state: present
