@@ -14,7 +14,7 @@
 
   roles:
     - {role: pkg}
-    - {role: bastille, when: bastille}
+    - {role: bastille, when: bastille, become: true}
     - {role: poudriere, when: poudriere, become: true}
     - {role: postgresql, when: postgresql, become: true}
     - {role: redis, when: redis, become: true}
