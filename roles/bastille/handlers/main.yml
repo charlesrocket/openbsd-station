@@ -1,0 +1,13 @@
+---
+
+- name: Add loopback interface
+  ansible.builtin.command: sysrc cloned_interfaces+=lo1
+
+- name: Set loopback interface name
+  community.general.sysrc:
+    name: ifconfig_lo1_name
+    value: "bastille0"
+    state: present
+
+- name: Enable loopback interface
+  ansible.builtin.command: service netif cloneup
