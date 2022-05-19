@@ -1,4 +1,5 @@
 accounting: true
+bastille: true
 poudriere: true
 postgresql: true
 redis: true
