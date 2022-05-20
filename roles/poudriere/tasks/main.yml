@@ -21,7 +21,7 @@
     owner: root
     mode: 0644
 
-- name: Copy Nginx config
+- name: Copy nginx config
   ansible.builtin.copy:
     src: nginx.conf
     dest: /usr/local/etc/nginx/nginx.conf
