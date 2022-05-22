@@ -101,6 +101,7 @@
     name: kern_securelevel_enable
     value: "YES"
     state: present
+  when: set_security_level
 
 - name: Set kernel security level
   community.general.sysrc:
