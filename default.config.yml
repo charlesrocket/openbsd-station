@@ -8,6 +8,8 @@ postgresql: false
 redis: false
 
 upgrade_packages: false
+set_security_level: false
+security_level: 3
 
 dotfiles_repo: "https://github.com/charlesrocket/dotfiles.git"
 dotfiles_repo_version: master

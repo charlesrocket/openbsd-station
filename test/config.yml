@@ -3,3 +3,6 @@ bastille: true
 poudriere: true
 postgresql: true
 redis: true
+
+set_security_level: true
+security_level: 2
