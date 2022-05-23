@@ -15,15 +15,15 @@
     cached: false
 
 - name: Copy poudriere config
-  ansible.builtin.copy:
-    src: poudriere.conf
+  ansible.builtin.template:
+    src: poudriere.conf.j2
     dest: /usr/local/etc/poudriere.conf
     owner: root
     mode: 0644
 
 - name: Copy nginx config
-  ansible.builtin.copy:
-    src: nginx.conf
+  ansible.builtin.template:
+    src: nginx.conf.j2
     dest: /usr/local/etc/nginx/nginx.conf
     owner: root
     mode: 0644
