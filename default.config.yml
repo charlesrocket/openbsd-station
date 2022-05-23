@@ -23,6 +23,9 @@ dotfiles_files:
   - .shrc
   - .zshrc
 
+make_config:
+  - "MAKE_JOBS_NUMBER?=3"
+
 pkgng_packages:
   - bastille
   - bzip2
