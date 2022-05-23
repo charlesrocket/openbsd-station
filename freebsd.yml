@@ -13,7 +13,7 @@
       tags: ['always']
 
   roles:
-    - {role: pkg}
+    - {role: pkg, become: true}
     - {role: bastille, when: bastille, become: true}
     - {role: poudriere, when: poudriere, become: true}
     - {role: postgresql, when: postgresql, become: true}
