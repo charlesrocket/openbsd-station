@@ -7,6 +7,9 @@ poudriere: false
 postgresql: false
 redis: false
 
+make_config:
+  - "MAKE_JOBS_NUMBER?=3"
+
 upgrade_packages: false
 set_security_level: false
 security_level: 3
@@ -22,9 +25,6 @@ dotfiles_files:
   - .gitconfig
   - .shrc
   - .zshrc
-
-make_config:
-  - "MAKE_JOBS_NUMBER?=3"
 
 pkgng_packages:
   - bastille
