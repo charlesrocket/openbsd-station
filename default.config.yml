@@ -59,6 +59,7 @@ pkgng_packages:
   - pam_yubico
   - pv
   - pwgen
+  - rbenv
   - rkhunter
   - rust
   - shards
