@@ -23,10 +23,3 @@
     user: root
     state: present
   become: true
-
-- name: Edit shell prompt
-  ansible.builtin.lineinfile:
-    dest: /home/{{ ansible_user_id }}/.shrc
-    line: 'export PS1="\u@\H x: "'
-    owner: "{{ ansible_user_id }}"
-    state: present
