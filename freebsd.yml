@@ -16,6 +16,9 @@
     - role: pkg
       become: true
 
+    - role: sys
+      become: true
+
     - role: bastille
       when: bastille
       become: true
@@ -35,9 +38,6 @@
     - role: common
 
     - role: charlesrocket.dotfiles
-
-    - role: sys
-      become: true
 
     - role: acct
       when: accounting
