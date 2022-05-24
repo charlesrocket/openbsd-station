@@ -69,7 +69,6 @@ pkgng_packages:
   - rbenv
   - rkhunter
   - rust
-  - shards
   - sshpass
   - sudo
   - tig
