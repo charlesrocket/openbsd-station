@@ -13,8 +13,6 @@ redis: false
 make_config:
   - "MAKE_JOBS_NUMBER?=3"
 
-# Keep packages up to date
-upgrade_packages: false
 set_security_level: false
 security_level: 3
 
@@ -30,6 +28,9 @@ dotfiles_files:
   - .gitconfig
   - .shrc
   - .zshrc
+
+# Keep packages up to date
+upgrade_packages: false
 
 # Packages
 pkgng_packages:
