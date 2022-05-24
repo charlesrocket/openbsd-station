@@ -68,6 +68,7 @@ pkgng_packages:
   - pwgen
   - rbenv
   - rkhunter
+  - screen
   - sshpass
   - sudo
   - tig
