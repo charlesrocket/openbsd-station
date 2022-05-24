@@ -1,7 +1,9 @@
 ---
+# Settings
 locale: "en_US.UTF-8"
 timezone: "America/Los_Angeles"
 
+# Configuration
 accounting: false
 bastille: false
 poudriere: false
@@ -11,10 +13,12 @@ redis: false
 make_config:
   - "MAKE_JOBS_NUMBER?=3"
 
+# Keep packages up to date
 upgrade_packages: false
 set_security_level: false
 security_level: 3
 
+# Dotfiles
 dotfiles_repo: "https://github.com/charlesrocket/dotfiles.git"
 dotfiles_repo_version: fbsd-server
 dotfiles_repo_accept_hostkey: true
@@ -27,6 +31,7 @@ dotfiles_files:
   - .shrc
   - .zshrc
 
+# Packages
 pkgng_packages:
   - bastille
   - bzip2
