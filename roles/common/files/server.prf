@@ -62,7 +62,7 @@ machine-role=server
 #ntp-ignore-stratum-16-peer=127.0.0.1
 
 # Profile name, will be used as title/description
-profile-name=Default Audit Template
+profile-name=Server Audit Template for Ansible
 
 # Number of seconds to pause between every test (0 is no pause)
 pause-between-tests=0
@@ -83,14 +83,16 @@ show-tool-tips=yes
 skip-plugins=no
 
 # Skip a test (one per line)
-#skip-test=SSH-7408
+skip-test=AUTH-9204
+skip-test=AUTH-9208
+skip-test=PKGS-7381
 
 # Skip a particular option within a test (when applicable)
 #skip-test=SSH-7408:loglevel
 #skip-test=SSH-7408:permitrootlogin
 
 # Skip Lynis upgrade availability test (default: no)
-#skip-upgrade-test=yes
+skip-upgrade-test=yes
 
 # Locations where to search for SSL certificates (separate paths with a colon)
 ssl-certificate-paths=/etc/apache2:/etc/dovecot:/etc/httpd:/etc/letsencrypt:/etc/pki:/etc/postfix:/etc/refind.d/keys:/etc/ssl:/opt/psa/var/certificates:/usr/local/psa/var/certificates:/usr/local/share/ca-certificates:/usr/share/ca-certificates:/usr/share/gnupg:/var/www:/srv/www
