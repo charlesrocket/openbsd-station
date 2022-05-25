@@ -83,6 +83,7 @@ show-tool-tips=yes
 skip-plugins=no
 
 # Skip a test (one per line)
+skip-test=AUTH-9218
 skip-test=AUTH-9204
 skip-test=AUTH-9208
 skip-test=PKGS-7381
