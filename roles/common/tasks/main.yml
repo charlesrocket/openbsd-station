@@ -15,6 +15,14 @@
     mode: 0755
   become: true
 
+- name: Copy Lynis profile
+  ansible.builtin.copy:
+    src: server.prf
+    dest: /usr/local/etc/lynis/server.prf
+    owner: root
+    mode: 0644
+  become: true
+
 - name: Install MOTD
   ansible.builtin.cron:
     name: "Update MOTD"
