@@ -43,7 +43,7 @@ compressed-uploads=yes
 #debug=yes
 
 # Show non-zero exit code when warnings are found
-error-on-warnings=no
+error-on-warnings=yes
 
 # Use Lynis in your own language (by default auto-detected)
 language=
