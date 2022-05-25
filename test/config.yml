@@ -4,5 +4,6 @@ poudriere: true
 postgresql: true
 redis: true
 
+hostname: test
 set_security_level: true
 security_level: 3
