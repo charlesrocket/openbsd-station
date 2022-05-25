@@ -17,6 +17,8 @@ dotfiles_files:
   - .zshrc
 
 # Configuration
+hostname:
+
 accounting: false
 bastille: false
 poudriere: false
