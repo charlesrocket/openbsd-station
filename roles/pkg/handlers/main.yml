@@ -1,4 +1,4 @@
 ---
 
 - name: Run pkg audit
-  ansible.builtin.command: pkd audit -F
+  ansible.builtin.command: pkg audit -F
