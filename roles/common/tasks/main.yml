@@ -32,6 +32,16 @@
     state: present
   become: true
 
+- name: Automatically fetch updates
+  ansible.builtin.cron:
+    name: "Fetch updates"
+    minute: "0"
+    hour: "2"
+    job: "/usr/sbin/freebsd-update cron"
+    user: root
+    state: present
+  become: true
+
 - name: Configure make
   ansible.builtin.template:
     src: make.conf.j2
