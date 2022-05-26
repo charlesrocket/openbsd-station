@@ -45,7 +45,7 @@
 
 - name: Disable process debugging facilities
   ansible.posix.sysctl:
-    name: unprivileged_read_msgbuf
+    name: security.bsd.unprivileged_proc_debug
     state: present
     value: '0'
 
