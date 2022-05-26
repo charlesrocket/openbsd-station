@@ -43,6 +43,12 @@
     state: present
     value: '1'
 
+- name: Disable process debugging facilities
+  ansible.posix.sysctl:
+    name: unprivileged_read_msgbuf
+    state: present
+    value: '0'
+
 - name: Blackhole TCP
   ansible.posix.sysctl:
     name: net.inet.tcp.blackhole
