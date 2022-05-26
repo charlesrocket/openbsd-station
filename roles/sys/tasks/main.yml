@@ -61,6 +61,12 @@
     state: present
     value: '1'
 
+- name: Tune loopback interface
+  ansible.posix.sysctl:
+    name: net.inet.tcp.nolocaltimewait
+    state: present
+    value: '1'
+
 - name: Enable microcode updates
   community.general.sysrc:
     name: microcode_update_enable
