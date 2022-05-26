@@ -121,7 +121,7 @@
     path: /boot/loader.conf
 
 - name: Activate H-TCP
-  community.general.sysrc:
+  ansible.posix.sysctl:
     name: inet.tcp.cc.algorithm
     state: present
     value: "htcp"
