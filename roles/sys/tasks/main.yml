@@ -17,7 +17,7 @@
   community.general.sysrc:
     name: hw.kbd.keymap_restrict_change
     state: present
-    value: "4"
+    value: '4'
 
 - name: Hide UIDs
   ansible.posix.sysctl:
