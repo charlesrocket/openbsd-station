@@ -73,6 +73,12 @@
     state: present
     value: '1'
 
+- name: Disable TCP keepalive
+  ansible.posix.sysctl:
+    name: net.inet.tcp.always_keepalive
+    state: present
+    value: '0'
+
 - name: Enable H-TCP
   community.general.sysrc:
     name: cc_htcp_load
