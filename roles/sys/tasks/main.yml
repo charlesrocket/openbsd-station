@@ -31,6 +31,12 @@
     state: present
     value: '0'
 
+- name: Random PID
+  ansible.posix.sysctl:
+    name: kern.randompid
+    state: present
+    value: '1'
+
 - name: Random IP packet IDs
   ansible.posix.sysctl:
     name: net.inet.ip.random_id
