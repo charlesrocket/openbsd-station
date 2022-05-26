@@ -73,6 +73,20 @@
     state: present
     value: '1'
 
+- name: Enable H-TCP
+  community.general.sysrc:
+    name: cc_htcp_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+
+- name: Activate H-TCP
+  ansible.posix.sysctl:
+    name: inet.tcp.cc.algorithm
+    state: present
+    value: "htcp"
+
+
 - name: Enable microcode updates
   community.general.sysrc:
     name: microcode_update_enable
@@ -112,19 +126,6 @@
     name: clear_tmp_enable
     value: "YES"
     state: present
-
-- name: Enable H-TCP
-  community.general.sysrc:
-    name: cc_htcp_load
-    state: present
-    value: "YES"
-    path: /boot/loader.conf
-
-- name: Activate H-TCP
-  ansible.posix.sysctl:
-    name: inet.tcp.cc.algorithm
-    state: present
-    value: "htcp"
 
 - name: Change loader logo
   community.general.sysrc:
