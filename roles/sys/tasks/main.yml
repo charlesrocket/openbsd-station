@@ -25,6 +25,12 @@
     state: present
     value: '0'
 
+- name: Hide processes running in jails
+  ansible.posix.sysctl:
+    name: security.bsd.see_jail_proc
+    state: present
+    value: '0'
+
 - name: Random IP packet IDs
   ansible.posix.sysctl:
     name: net.inet.ip.random_id
