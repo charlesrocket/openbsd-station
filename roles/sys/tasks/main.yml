@@ -43,6 +43,12 @@
     state: present
     value: '1'
 
+- name: Disable reading kernel message buffer
+  ansible.posix.sysctl:
+    name: security.bsd.unprivileged_read_msgbuf
+    state: present
+    value: '0'
+
 - name: Disable process debugging facilities
   ansible.posix.sysctl:
     name: security.bsd.unprivileged_proc_debug
