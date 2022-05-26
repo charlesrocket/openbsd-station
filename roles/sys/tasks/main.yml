@@ -5,7 +5,7 @@
     name: hostname
     value: "{{ hostname }}"
     state: present
-  when: hostname is defined
+  when: hostname
 
 - name: Tune TTYs
   ansible.builtin.replace:
