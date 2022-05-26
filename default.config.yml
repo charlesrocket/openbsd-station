@@ -17,13 +17,13 @@ dotfiles_files:
   - .zshrc
 
 # Configuration
-hostname:
-
 accounting: false
 bastille: false
 poudriere: false
 postgresql: false
 redis: false
+
+hostname:
 
 make_config:
   - "MAKE_JOBS_NUMBER?=3"
