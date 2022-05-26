@@ -13,6 +13,12 @@
     regexp: '(?:^|\W)secure(?:$|\W)'
     replace: ' insecure'
 
+- name: Disallow keymap changes for non-privileged users
+  community.general.sysrc:
+    name: hw.kbd.keymap_restrict_change
+    state: present
+    value: "4"
+
 - name: Hide UIDs
   ansible.posix.sysctl:
     name: security.bsd.see_other_uids
