@@ -114,6 +114,12 @@
     value: "YES"
     path: /boot/loader.conf
 
+- name: Activate H-TCP
+  community.general.sysrc:
+    name: inet.tcp.cc.algorithm
+    state: present
+    value: "htcp"
+
 - name: Change loader logo
   community.general.sysrc:
     name: loader_logo
