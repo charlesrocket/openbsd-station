@@ -37,12 +37,6 @@
     state: present
     value: '0'
 
-- name: Random IP packet IDs
-  ansible.posix.sysctl:
-    name: net.inet.ip.random_id
-    state: present
-    value: '1'
-
 - name: Disable reading kernel message buffer
   ansible.posix.sysctl:
     name: security.bsd.unprivileged_read_msgbuf
@@ -54,6 +48,12 @@
     name: security.bsd.unprivileged_proc_debug
     state: present
     value: '0'
+
+- name: Random IP packet IDs
+  ansible.posix.sysctl:
+    name: net.inet.ip.random_id
+    state: present
+    value: '1'
 
 - name: Blackhole TCP
   ansible.posix.sysctl:
