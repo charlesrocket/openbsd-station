@@ -19,6 +19,12 @@
     state: present
     value: '0'
 
+- name: Hide GIDs
+  ansible.posix.sysctl:
+    name: security.bsd.see_other_gids
+    state: present
+    value: '0'
+
 - name: Random IP packet IDs
   ansible.posix.sysctl:
     name: net.inet.ip.random_id
