@@ -19,6 +19,12 @@
     state: present
     value: '4'
 
+- name: Verify packets
+  ansible.posix.sysctl:
+    name: net.inet.ip.check_interface
+    state: present
+    value: '1'
+
 - name: Hide UIDs
   ansible.posix.sysctl:
     name: security.bsd.see_other_uids
@@ -78,12 +84,6 @@
     name: net.inet.tcp.always_keepalive
     state: present
     value: '0'
-
-- name: Verify packets
-  ansible.posix.sysctl:
-    name: net.inet.ip.check_interface
-    state: present
-    value: '1'
 
 - name: Drop SYN/FIN packets
   ansible.posix.sysctl:
