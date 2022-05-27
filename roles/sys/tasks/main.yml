@@ -91,6 +91,12 @@
     state: present
     value: '1'
 
+- name: Disable ICMP RST
+  ansible.posix.sysctl:
+    name: net.inet.tcp.icmp_may_rst
+    state: present
+    value: '0'
+
 - name: Enable H-TCP
   community.general.sysrc:
     name: cc_htcp_load
