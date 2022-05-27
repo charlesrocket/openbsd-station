@@ -79,6 +79,12 @@
     state: present
     value: '0'
 
+- name: Verify packets
+  ansible.posix.sysctl:
+    name: net.inet.ip.check_interface
+    state: present
+    value: '1'
+
 - name: Enable H-TCP
   community.general.sysrc:
     name: cc_htcp_load
