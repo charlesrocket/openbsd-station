@@ -8,8 +8,6 @@
     cached: false
   vars:
     packages: "{{ pkgng_packages }}"
-  notify:
-    - Run pkg audit
 
 - name: Gather the package facts
   ansible.builtin.package_facts:
