@@ -85,6 +85,12 @@
     state: present
     value: '1'
 
+- name: Drop SYN/FIN packets
+  ansible.posix.sysctl:
+    name: net.inet.tcp.drop_synfin
+    state: present
+    value: '1'
+
 - name: Enable H-TCP
   community.general.sysrc:
     name: cc_htcp_load
