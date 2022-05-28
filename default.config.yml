@@ -20,7 +20,6 @@ dotfiles_files:
 accounting: false
 bastille: false
 poudriere: false
-postgresql: false
 
 hostname:
 

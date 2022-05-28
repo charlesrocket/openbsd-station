@@ -27,10 +27,6 @@
       when: poudriere
       become: true
 
-    - role: postgresql
-      when: postgresql
-      become: true
-
     - role: common
 
     - role: charlesrocket.dotfiles
