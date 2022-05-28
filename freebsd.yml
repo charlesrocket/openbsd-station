@@ -31,10 +31,6 @@
       when: postgresql
       become: true
 
-    - role: redis
-      when: redis
-      become: true
-
     - role: common
 
     - role: charlesrocket.dotfiles

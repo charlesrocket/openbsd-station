@@ -2,7 +2,6 @@ accounting: true
 bastille: true
 poudriere: true
 postgresql: true
-redis: true
 
 hostname: test
 set_security_level: true
