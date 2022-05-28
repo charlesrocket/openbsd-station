@@ -21,7 +21,6 @@ accounting: false
 bastille: false
 poudriere: false
 postgresql: false
-redis: false
 
 hostname:
 
