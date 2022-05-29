@@ -61,6 +61,12 @@
     state: present
     value: '1'
 
+- name: Do not process IP options
+  ansible.posix.sysctl:
+    name: net.inet.ip.process_options
+    state: present
+    value: '0'
+
 - name: Blackhole TCP
   ansible.posix.sysctl:
     name: net.inet.tcp.blackhole
