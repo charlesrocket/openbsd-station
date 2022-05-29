@@ -110,6 +110,12 @@
     value: "YES"
     path: /boot/loader.conf
 
+- name: Enable ntpd
+  community.general.sysrc:
+    name: ntpd_enable
+    value: "YES"
+    state: present
+
 - name: Enable microcode updates
   community.general.sysrc:
     name: microcode_update_enable
