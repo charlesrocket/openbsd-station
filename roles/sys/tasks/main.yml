@@ -116,6 +116,12 @@
     value: "YES"
     state: present
 
+- name: System clock sync on startup
+  community.general.sysrc:
+    name: ntpd_sync_on_start
+    value: "YES"
+    state: present
+
 - name: Enable microcode updates
   community.general.sysrc:
     name: microcode_update_enable
