@@ -9,5 +9,4 @@ status="$(sysctl -a | grep -E 'machdep.bootmethod|hw.model|hw.ncpu|hw.realmem|vf
 -e 's/vfs.zfs.version.module/ZFS version/' \
 -e 's/hw.machine_arch/Architecture/')"
 
-printf '%s' "$status"
-printf '%s' "\n"
+printf '%s\n\n' "$status"
