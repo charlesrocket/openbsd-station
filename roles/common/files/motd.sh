@@ -1,4 +1,5 @@
 #!/bin/sh
+
 figlet "$(hostname)" | lolcat -f && echo
 
 status="$(sysctl -a | grep -E 'machdep.bootmethod|hw.model|hw.ncpu|hw.realmem|vfs.zfs.version.module|hw.machine_arch' | sed \
