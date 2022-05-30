@@ -7,20 +7,20 @@
   become: true
   when: upgrade_packages
 
-- name: Copy MOTD
-  ansible.builtin.copy:
-    src: motd.sh
-    dest: /etc/motd.sh
-    owner: root
-    mode: 0755
-  become: true
-
 - name: Copy Lynis profile
   ansible.builtin.copy:
     src: server.prf
     dest: /usr/local/etc/lynis/server.prf
     owner: root
     mode: 0644
+  become: true
+
+- name: Copy MOTD
+  ansible.builtin.copy:
+    src: motd.sh
+    dest: /etc/motd.sh
+    owner: root
+    mode: 0755
   become: true
 
 - name: Install MOTD
