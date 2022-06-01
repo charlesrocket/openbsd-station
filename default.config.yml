@@ -70,7 +70,6 @@ pkgng_packages:
   - screen
   - sshpass
   - sudo
-  - tig
   - tmux
   - transmission-cli
   - transmission-daemon
