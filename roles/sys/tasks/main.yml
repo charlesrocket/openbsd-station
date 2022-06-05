@@ -6,7 +6,7 @@
     value: "{{ hostname }}"
     state: present
   when: hostname
-  
+
 - name: Set timezone
   community.general.timezone:
     name: "{{ timezone }}"
