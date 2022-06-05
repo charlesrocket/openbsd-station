@@ -6,6 +6,10 @@
     value: "{{ hostname }}"
     state: present
   when: hostname
+  
+- name: Set timezone
+  community.general.timezone:
+    name: "{{ timezone }}"
 
 - name: Tune TTYs
   ansible.builtin.replace:
