@@ -66,7 +66,6 @@ pkgng_packages:
   - rbenv
   - rkhunter
   - screen
-  - sshpass
   - sudo
   - tmux
   - transmission-cli
