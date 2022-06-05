@@ -58,7 +58,6 @@ pkgng_packages:
   - mc
   - netcat
   - nmap
-# - openssl
   - pam_yubico
   - pciutils
   - pv
