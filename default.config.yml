@@ -46,7 +46,6 @@ pkgng_packages:
   - fdupes
   - figlet
   - gawk
-  - gcc
   - git
   - gnupg
   - gzip
