@@ -41,6 +41,7 @@
     user: root
     state: present
   become: true
+  when: auto_fetch
 
 - name: Configure make
   ansible.builtin.template:

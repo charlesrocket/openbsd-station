@@ -16,6 +16,7 @@ dotfiles_files:
   - .zshrc
 
 # Configuration
+auto_fetch: false
 accounting: false
 bastille: false
 poudriere: false
