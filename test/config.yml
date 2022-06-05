@@ -1,3 +1,4 @@
+auto_fetch: true
 accounting: true
 bastille: true
 poudriere: true
