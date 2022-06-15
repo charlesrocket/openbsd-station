@@ -58,7 +58,6 @@ pkgng_packages:
   - lynx
   - mc
   - netcat
-  - nmap
   - pam_yubico
   - pciutils
   - pv
