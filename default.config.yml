@@ -43,7 +43,6 @@ pkgng_packages:
   - diffutils
   - direnv
   - exfat-utils
-  - fdupes
   - figlet
   - gawk
   - git
