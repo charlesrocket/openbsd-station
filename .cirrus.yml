@@ -4,7 +4,7 @@ task:
   freebsd_instance:
     image_family: freebsd-13-1
 
-  install_script: pkg install -y sudo git py38-ansible
+  install_script: pkg install -y sudo git py39-ansible
 
   clone_script: |
     git clone -b ${CIRRUS_BRANCH} https://github.com/charlesrocket/freebsd-server /tmp/freebsd-server
