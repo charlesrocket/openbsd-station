@@ -6,3 +6,5 @@ poudriere: true
 hostname: test
 set_security_level: true
 security_level: 3
+
+upgrade_packages: false
