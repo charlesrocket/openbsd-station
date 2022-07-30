@@ -30,7 +30,7 @@ set_security_level: false
 security_level: 3
 
 # Keep packages up to date
-upgrade_packages: false
+upgrade_packages: true
 
 # Packages
 pkgng_packages:
