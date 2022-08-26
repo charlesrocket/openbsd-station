@@ -89,6 +89,12 @@
     state: present
     value: '1'
 
+- name: Disable PMTUD
+  ansible.posix.sysctl:
+    name: net.inet.tcp.path_mtu_discovery
+    state: present
+    value: '0'
+
 - name: Disable TCP keepalive
   ansible.posix.sysctl:
     name: net.inet.tcp.always_keepalive
