@@ -65,8 +65,6 @@ pkgng_packages:
   - rkhunter
   - screen
   - tmux
-  - transmission-cli
-  - transmission-daemon
   - unzip
   - wget
   - whois
