@@ -16,6 +16,8 @@
     - role: common
 
     - role: charlesrocket.dotfiles
+      become: true
+      become_user: "{{ username }}"
 
     - role: pkg
       become: true
