@@ -2,8 +2,6 @@
 
 set -eu
 
-echo "http://cdn.openbsd.org/pub/OpenBSD/" > /etc/installurl
-
 pkg_add -I ansible git
 git clone https://github.com/charlesrocket/openbsd-station
 cd openbsd-station
