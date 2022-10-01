@@ -1,10 +1,4 @@
-auto_fetch: true
-accounting: true
-bastille: true
-poudriere: true
-
 hostname: test
-set_security_level: true
-security_level: 3
+username: foo
 
 upgrade_packages: false

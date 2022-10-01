@@ -2,18 +2,10 @@
 
 set -eu
 
-if ! command -v sudo >/dev/null 2>&1; then
-	>&2 echo "This script requires 'sudo' binary to be installed"
-	exit 1
-fi
+echo "http://cdn.openbsd.org/pub/OpenBSD/" > /etc/installurl
 
-if [ "$(id -u)" -eq "0" ]; then
-	>&2 echo "This script must be run as user"
-	exit 1
-fi
-
-sudo pkg install -y git py39-ansible
-git clone https://github.com/charlesrocket/freebsd-server
-cd freebsd-server
+pkg_add ansible git
+git clone https://github.com/charlesrocket/openbsd-station
+cd openbsd-station
 ansible-galaxy install -r requirements.yml
-ansible-playbook freebsd.yml --ask-become-pass
+ansible-playbook openbsd.yml --ask-become-pass

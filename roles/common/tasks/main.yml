@@ -1,7 +1,6 @@
 ---
-
 - name: Upgrade installed packages
-  community.general.pkgng:
+  community.general.openbsd_pkg:
     name: "*"
     state: latest
   become: true
@@ -9,8 +8,8 @@
 
 - name: Copy Lynis profile
   ansible.builtin.copy:
-    src: server.prf
-    dest: /usr/local/etc/lynis/server.prf
+    src: desktop.prf
+    dest: /usr/local/etc/lynis/desktop.prf
     owner: root
     mode: 0644
   become: true
@@ -30,24 +29,4 @@
     job: "/etc/motd.sh > /etc/motd.template"
     user: root
     state: present
-  become: true
-
-- name: Automatically fetch updates
-  ansible.builtin.cron:
-    name: "Fetch updates"
-    minute: "0"
-    hour: "2"
-    job: "/usr/sbin/freebsd-update cron"
-    user: root
-    state: present
-  become: true
-  when: auto_fetch
-
-- name: Configure make
-  ansible.builtin.template:
-    src: make.conf.j2
-    dest: /etc/make.conf
-    owner: root
-    group: wheel
-    mode: 0644
   become: true

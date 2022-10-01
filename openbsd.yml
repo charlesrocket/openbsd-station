@@ -1,5 +1,5 @@
 ---
-- name: FreeBSD Server
+- name: OpenBSD Station
   hosts: localhost
 
   vars_files:
@@ -13,24 +13,12 @@
       tags: ['always']
 
   roles:
-    - role: pkg
-      become: true
-
-    - role: sys
-      become: true
-
-    - role: bastille
-      when: bastille
-      become: true
-
-    - role: poudriere
-      when: poudriere
-      become: true
-
     - role: common
 
     - role: charlesrocket.dotfiles
 
-    - role: acct
-      when: accounting
+    - role: pkg
+      become: true
+
+    - role: sys
       become: true

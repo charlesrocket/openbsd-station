@@ -1,7 +1,7 @@
 #################################################################################
 #
 #
-# Lynis - Post-Ansible Server scan profile
+# Lynis - Post-Ansible Desktop scan profile
 #
 #
 #################################################################################
@@ -56,13 +56,13 @@ language=
 #ntpd-role=client
 
 # Defines the role of the system (personal, workstation or server)
-machine-role=server
+machine-role=workstation
 
 # Ignore some stratum 16 hosts (for example when running as time source itself)
 #ntp-ignore-stratum-16-peer=127.0.0.1
 
 # Profile name, will be used as title/description
-profile-name=Server Audit Template for Ansible
+profile-name=Desktop Audit Template for Ansible
 
 # Number of seconds to pause between every test (0 is no pause)
 pause-between-tests=0

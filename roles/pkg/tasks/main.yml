@@ -1,13 +1,10 @@
 ---
-
 - name: Ensure packages are installed
-  community.general.pkgng:
+  community.general.openbsd_pkg:
     state: present
     name: "{{ packages }}"
-    autoremove: true
-    cached: false
   vars:
-    packages: "{{ pkgng_packages }}"
+    packages: "{{ pkg_packages }}"
 
 - name: Gather the package facts
   ansible.builtin.package_facts:

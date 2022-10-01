@@ -4,7 +4,7 @@ timezone: "America/Los_Angeles"
 
 # Dotfiles
 dotfiles_repo: "https://github.com/charlesrocket/dotfiles.git"
-dotfiles_repo_version: fbsd-server
+dotfiles_repo_version: obsd-station
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_force: true
 dotfiles_repo_local_destination: "~/git/dotfiles"
@@ -12,61 +12,85 @@ dotfiles_home: "~"
 dotfiles_files:
   - .config/mc/ini
   - .gitconfig
-  - .shrc
+  - .xsession
   - .zshrc
 
 # Configuration
-auto_fetch: false
-accounting: false
-bastille: false
-poudriere: false
-
 hostname:
-
-make_config:
-  - "MAKE_JOBS_NUMBER?=3"
-
-set_security_level: false
-security_level: 3
+username: xxx
 
 # Keep packages up to date
 upgrade_packages: true
 
 # Packages
-pkgng_packages:
-  - bastille
-  - chkrootkit
+pkg_packages:
+  - alacritty
   - clamav
+  - cmake
   - curl
-  - destroy
-  - devcpu-data
-  - diffutils
   - direnv
-  - exfat-utils
+  - doas
+  - droid-fonts-ttf
+  - editorconfig-core-c
+  - emacs
+  - fdupes
+  - fd-find
+  - ffuf
   - figlet
+  - firefox-esr
+  - fzf
   - gawk
+  - gcc
+  - gimp
   - git
+  - gmake
+  - gnuls
   - gnupg
+  - gnuplot
   - gzip
+  - hashcat
   - htop
   - httping
+  - hwstat
   - iftop
+  - imv
   - less
+  - llvm
   - lolcat
   - lynis
   - lynx
+  - masscan
   - mc
+  - meson
+  - mp3blaster
+  - mpv
   - netcat
-  - pam_yubico
-  - pciutils
+  - nikto
+  - ninja
+  - nmap
+  - pcsc-tools
   - pv
   - pwgen
+  - python3
   - rbenv
+  - ripgrep
   - rkhunter
+  - rust
+  - scdoc
   - screen
+  - seatd
+  - shellcheck
+  - tig
   - tmux
+  - transmission
+  - tree
+  - unibilium
   - unzip
+  - vagrant
+  - vlc
   - wget
   - whois
-  - wireguard
+  - wlogout
+  - ykpers
+  - zmap
   - zsh
