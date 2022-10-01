@@ -15,4 +15,6 @@ jobs:
         prepare: |
           pkg_add ansible
 
-        run: test/idempotence_test.sh
+        run: |
+          cp test/config.yml config.yml
+          test/idempotence_test.sh
