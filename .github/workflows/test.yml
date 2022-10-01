@@ -13,7 +13,7 @@ jobs:
       with:
         usesh: true
         prepare: |
-          pkg_add ansible
+          pkg_add ansible git
 
         run: |
           cp test/config.yml config.yml
