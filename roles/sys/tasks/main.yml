@@ -6,7 +6,7 @@
   when: hostname
 
 - name: Configure doas
-  template:
+  ansible.builtin.template:
     src: doas.conf.j2
     dest: /etc/doas.conf
     mode: "0644"
