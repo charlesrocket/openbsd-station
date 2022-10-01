@@ -9,4 +9,4 @@
   template:
     src: doas.conf.j2
     dest: /etc/doas.conf
-    mode: '0644'
+    mode: "0644"

@@ -24,9 +24,9 @@
 
 - name: Install MOTD
   ansible.builtin.cron:
-    name: "Update MOTD"
+    name: Update MOTD
     special_time: reboot
-    job: "/etc/motd.sh > /etc/motd.template"
+    job: /etc/motd.sh > /etc/motd.template
     user: root
     state: present
   become: true
