@@ -6,14 +6,6 @@
   become: true
   when: upgrade_packages
 
-- name: Copy Lynis profile
-  ansible.builtin.copy:
-    src: desktop.prf
-    dest: /usr/local/etc/lynis/desktop.prf
-    owner: root
-    mode: 0644
-  become: true
-
 - name: Copy MOTD
   ansible.builtin.copy:
     src: motd.sh
