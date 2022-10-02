@@ -19,6 +19,5 @@ jobs:
           echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers
           adduser -noconfig -m -batch foo wheel 'Bar'
           chown -R foo:foo .
-          su -l foo -c 'test/idempotence_test.sh'
           cp test/config.yml config.yml
-          test/idempotence_test.sh
+          su -l foo -c 'test/idempotence_test.sh'
