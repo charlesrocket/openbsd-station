@@ -11,3 +11,11 @@
     apply: true
   become: true
   when: patch_system
+
+- name: Edit user
+  ansible.builtin.user:
+    name: "{{ ansible_user_id }}"
+    shell: /usr/local/bin/zsh
+    groups: wheel
+    append: true
+  become: true
