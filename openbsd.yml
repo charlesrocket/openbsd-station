@@ -16,10 +16,9 @@
     - role: common
 
     - role: charlesrocket.git
+      become: true
 
     - role: charlesrocket.dotfiles
-      become: false
-      remote_user: "{{ username }}"
 
     - role: pkg
       become: true
