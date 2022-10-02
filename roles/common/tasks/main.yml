@@ -5,3 +5,9 @@
     state: latest
   become: true
   when: upgrade_packages
+
+- name: Apply all available system patches
+  community.general.syspatch:
+    apply: true
+  become: true
+  when: patch_system

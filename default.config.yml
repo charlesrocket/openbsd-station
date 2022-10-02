@@ -20,6 +20,7 @@ hostname:
 
 # Keep packages up to date
 upgrade_packages: true
+patch_system: true
 
 # Packages
 pkg_packages:
