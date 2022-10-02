@@ -5,20 +5,3 @@
     state: latest
   become: true
   when: upgrade_packages
-
-- name: Copy MOTD
-  ansible.builtin.copy:
-    src: motd.sh
-    dest: /etc/motd.sh
-    owner: root
-    mode: 0755
-  become: true
-
-- name: Install MOTD
-  ansible.builtin.cron:
-    name: Update MOTD
-    special_time: reboot
-    job: /etc/motd.sh > /etc/motd.template
-    user: root
-    state: present
-  become: true
