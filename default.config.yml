@@ -34,7 +34,6 @@ pkg_packages:
   - firefox-esr
   - fzf
   - gawk
-  - gcc--
   - gimp
   - git
   - gmake

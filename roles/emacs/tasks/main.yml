@@ -2,7 +2,7 @@
 - name: Ensure Emacs is installed
   community.general.openbsd_pkg:
     state: present
-    name: emacs--
+    name: emacs--gtk3
   become: true
 
 - name: Clone Doom Emacs
