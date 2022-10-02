@@ -7,7 +7,7 @@
 
 - name: Clone Doom Emacs
   ansible.builtin.git:
-    repo: 'https://github.com/hlissner/doom-emacs'
+    repo: https://github.com/hlissner/doom-emacs
     dest: ~/.emacs.d
     version: master
   notify:
