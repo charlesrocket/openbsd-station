@@ -16,6 +16,6 @@ jobs:
           pkg_add ansible git
 
         run: |
-          adduser -batch foo wheel 'Bar'
+          adduser -noconfig -m -batch foo wheel 'Bar'
           cp test/config.yml config.yml
           test/idempotence_test.sh
