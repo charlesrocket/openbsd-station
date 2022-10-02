@@ -13,11 +13,12 @@ jobs:
       with:
         usesh: true
         prepare: |
-          pkg_add ansible sudo
+          pkg_add ansible git
 
         run: |
-          echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers
-          adduser -noconfig -m -batch foo wheel 'Bar'
-          chown -R foo:foo .
-          cp test/config.yml config.yml
-          su -l foo -c 'test/idempotence_test.sh'
+          git clone -b ${GITHUB_REF##*/} https://github.com/charlesrocket/openbsd-station /tmp/openbsd-station
+          cp /tmp/openbsd-station/test/config.yml /tmp/openbsd-station/config.yml
+          echo "permit nopass keepenv :wheel" > /etc/doas.conf
+          adduser -noconfig -group USER -batch foo wheel
+          chown -R foo:foo /tmp/openbsd-station
+          su -l foo -c 'cd /tmp/openbsd-station && test/idempotence_test.sh'
