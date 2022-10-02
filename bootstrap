@@ -2,7 +2,7 @@
 
 set -eu
 
-pkg_add -I ansible git
+doas pkg_add -I ansible git
 git clone https://github.com/charlesrocket/openbsd-station
 cd openbsd-station
 ansible-galaxy install -r requirements.yml
