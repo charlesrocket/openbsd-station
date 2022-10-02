@@ -15,9 +15,6 @@ dotfiles_files:
   - .xsession
   - .zshrc
 
-# Configuration
-hostname:
-
 # Keep packages up to date
 upgrade_packages: true
 patch_system: true

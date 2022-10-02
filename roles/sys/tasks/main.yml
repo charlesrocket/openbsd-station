@@ -1,10 +1,4 @@
 ---
-- name: Set hostname
-  ansible.builtin.hostname:
-    name: "{{ hostname }}"
-    use: openbsd
-  when: hostname
-
 - name: Configure doas
   ansible.builtin.template:
     src: doas.conf.j2
