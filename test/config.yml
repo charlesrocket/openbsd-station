@@ -1,5 +1,5 @@
 ---
 hostname: test
-username: foo
 
 upgrade_packages: false
+patch_system: false
