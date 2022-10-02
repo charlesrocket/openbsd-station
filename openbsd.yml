@@ -16,6 +16,7 @@
     - role: common
 
     - role: charlesrocket.git
+
     - role: charlesrocket.dotfiles
       become: false
       remote_user: "{{ username }}"
