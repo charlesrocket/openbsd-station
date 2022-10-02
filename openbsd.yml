@@ -20,6 +20,8 @@
 
     - role: charlesrocket.dotfiles
 
+    - role: emacs
+
     - role: pkg
       become: true
 

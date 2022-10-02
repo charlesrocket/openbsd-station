@@ -29,7 +29,6 @@ pkg_packages:
   - curl
   - direnv
   - editorconfig-core-c
-  - emacs--
   - fdupes
   - figlet
   - firefox-esr

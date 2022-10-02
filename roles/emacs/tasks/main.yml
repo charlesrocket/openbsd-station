@@ -1,0 +1,14 @@
+---
+- name: Ensure Emacs is installed
+  community.general.openbsd_pkg:
+    state: present
+    name: emacs--
+  become: true
+
+- name: Clone Doom Emacs
+  ansible.builtin.git:
+    repo: 'https://github.com/hlissner/doom-emacs'
+    dest: ~/.emacs.d
+    version: master
+  notify:
+    - Synchronize Doom Emacs
