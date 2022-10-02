@@ -29,18 +29,18 @@ pkg_packages:
   - curl
   - direnv
   - editorconfig-core-c
-  - emacs
+  - emacs--
   - fdupes
   - figlet
   - firefox-esr
   - fzf
   - gawk
-  - gcc
+  - gcc--
   - gimp
   - git
   - gmake
   - gnupg
-  - gnuplot
+  - gnuplot--
   - htop
   - iftop
   - imv
@@ -61,13 +61,13 @@ pkg_packages:
   - ripgrep
   - rust
   - scdoc
-  - screen
+  - screen--
   - shellcheck
   - tig
   - transmission
   - tree
   - unibilium
-  - unzip
+  - unzip--
   - vlc
   - wget
   - ykpers
