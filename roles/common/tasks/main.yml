@@ -14,8 +14,7 @@
 - name: Edit user
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
-    shell: /usr/local/bin/zsh
-    groups: wheel
+    groups: staff,wheel
     append: true
   become: true
 
