@@ -23,7 +23,7 @@
       become: true
 
     - role: charlesrocket.dotfiles
-    
+
     - role: common
 
     - role: emacs
