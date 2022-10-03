@@ -12,7 +12,7 @@ dotfiles_home: "~"
 dotfiles_files:
   - .config/mc/ini
   - .gitconfig
-  - .xsession
+  - .xinitrc
   - .zshrc
 
 # Keep packages up to date
