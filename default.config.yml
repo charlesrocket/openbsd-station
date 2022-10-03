@@ -22,7 +22,7 @@ patch_system: true
 # Packages
 pkg_packages:
   - alacritty
-  - bspwm
+  - awesome
   - clamav
   - cmake
   - curl
