@@ -13,17 +13,17 @@
       tags: [always]
 
   roles:
-    - role: common
-
-    - role: charlesrocket.git
-      become: true
-
-    - role: charlesrocket.dotfiles
-
-    - role: emacs
-
     - role: pkg
       become: true
 
     - role: sys
       become: true
+
+    - role: charlesrocket.git
+      become: true
+
+    - role: charlesrocket.dotfiles
+    
+    - role: common
+
+    - role: emacs
