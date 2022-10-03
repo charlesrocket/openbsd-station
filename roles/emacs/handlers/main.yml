@@ -2,4 +2,3 @@
 - name: Synchronize Doom Emacs
   ansible.builtin.command: ~/.emacs.d/bin/doom sync
   when: test_run is undefined
-  
