@@ -1,3 +1,4 @@
 ---
 test_run: true
+xenodm: true
 patch_system: false

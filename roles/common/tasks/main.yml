@@ -10,3 +10,8 @@
     groups: staff,wheel
     append: true
   become: true
+
+- name: Enable xenodm
+  ansible.builtin.command: rcctl enable xenodm
+  when: xenodm
+  become: true

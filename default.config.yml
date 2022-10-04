@@ -15,6 +15,9 @@ dotfiles_files:
   - .xsession
   - .zshrc
 
+# Configuration
+xenodm: true
+
 # Keep packages up to date
 patch_system: true
 
