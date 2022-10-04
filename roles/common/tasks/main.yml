@@ -11,7 +11,12 @@
     append: true
   become: true
 
+- name: Check xenodm
+  ansible.builtin.command: rcctl check xenodm
+  register: xenodm_check
+  when: xenodm
+
 - name: Enable xenodm
   ansible.builtin.command: rcctl enable xenodm
-  when: xenodm
+  when: xenodm_check.stdout != "xenodm(ok)"
   become: true
