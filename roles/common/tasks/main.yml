@@ -1,11 +1,4 @@
 ---
-- name: Upgrade installed packages
-  community.general.openbsd_pkg:
-    name: "*"
-    state: latest
-  become: true
-  when: upgrade_packages
-
 - name: Apply all available system patches
   community.general.syspatch:
   become: true

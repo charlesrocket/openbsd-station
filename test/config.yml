@@ -1,4 +1,3 @@
 ---
 test_run: true
-upgrade_packages: false
 patch_system: false

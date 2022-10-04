@@ -16,7 +16,6 @@ dotfiles_files:
   - .zshrc
 
 # Keep packages up to date
-upgrade_packages: true
 patch_system: true
 
 # Packages
