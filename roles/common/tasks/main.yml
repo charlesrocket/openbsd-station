@@ -15,6 +15,7 @@
   ansible.builtin.command: rcctl check xenodm
   register: xenodm_check
   when: xenodm
+  changed_when: false
 
 - name: Enable xenodm
   ansible.builtin.command: rcctl enable xenodm
