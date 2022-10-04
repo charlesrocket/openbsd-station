@@ -21,4 +21,5 @@
 - name: Enable xenodm
   ansible.builtin.command: rcctl enable xenodm
   when: xenodm_check.stdout != "xenodm(ok)"
+  changed_when: false
   become: true
