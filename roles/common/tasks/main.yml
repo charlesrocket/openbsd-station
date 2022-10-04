@@ -4,6 +4,17 @@
   become: true
   when: patch_system
 
+- name: Create home directories
+  ansible.builtin.file:
+    path: "{{ item }}"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+    mode: 0755
+    state: directory
+  loop:
+    - ~/bin
+    - ~/pictures
+
 - name: Edit user
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
