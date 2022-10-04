@@ -26,4 +26,6 @@
 
     - role: common
 
+    - role: netrc
+
     - role: emacs
