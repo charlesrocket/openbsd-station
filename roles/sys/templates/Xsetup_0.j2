@@ -1,0 +1,13 @@
+#!/bin/sh
+
+/usr/X11R6/bin/xsetroot -solid \#000000
+/usr/X11R6/bin/xset fp+ /usr/local/share/font/spleen
+
+(
+while true; do
+    reboot="%{F#b00035}%{A:reboot:} reboot %{A}%{F-}"
+    shutdown="%{F#b00035}%{A:shutdown -p now:} off %{A}%{F-}"
+    echo "  $(date '+%T')  %{r}${reboot}/${shutdown}  $(date '+%F')    $(apm -l)%  "
+    sleep 1
+done | lemonbar -d -g 1920x40+0+0 -f 'spleen:style=Medium:pixelsize=12' -B \#000000 -F \#eeeeee | sh
+) &

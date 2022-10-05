@@ -43,6 +43,7 @@ pkg_packages:
   - htop
   - iftop
   - imv
+  - lemonbar
   - llvm
   - lynis
   - lynx
@@ -62,6 +63,7 @@ pkg_packages:
   - scdoc
   - screen--
   - shellcheck
+  - spleen
   - tig
   - transmission
   - tree

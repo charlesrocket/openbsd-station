@@ -5,3 +5,17 @@
     dest: /etc/doas.conf
     mode: "0644"
   when: test_run is undefined
+
+- name: Configure xenodm | Xresources
+  ansible.builtin.template:
+    src: Xresources.j2
+    dest: /etc/X11/xenodm/Xresources
+    mode: "0444"
+  when: xenodm
+
+- name: Configure xenodm | Xsetup_0
+  ansible.builtin.template:
+    src: Xsetup_0.j2
+    dest: /etc/X11/xenodm/Xsetup_0
+    mode: "0755"
+  when: xenodm
