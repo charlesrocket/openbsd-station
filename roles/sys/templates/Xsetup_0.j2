@@ -5,9 +5,21 @@
 
 (
 while true; do
-    reboot="%{F#b00035}%{A:reboot:} reboot %{A}%{F-}"
-    shutdown="%{F#b00035}%{A:shutdown -p now:} off %{A}%{F-}"
-    echo "  $(date '+%T')  %{r}${reboot}/${shutdown}  $(date '+%F')    $(apm -l)%  "
-    sleep 1
-done | lemonbar -d -g 1920x40+0+0 -f 'spleen:style=Medium:pixelsize=12' -B \#000000 -F \#eeeeee | sh
+    xmessage -geometry +540-32 \
+        -buttons "[ Sleep ]":20,"[ Restart ]":21,"[ Shutdown ]":22 ""
+    ACTION=$?
+    echo "Xmessage said: $ACTION"
+    if   [ $ACTION -eq 20 ]; then /usr/sbin/zzz;
+    elif [ $ACTION -eq 21 ]; then
+        xsetroot -cursor_name watch
+        /sbin/shutdown -r now
+    elif [ $ACTION -eq 22 ]; then
+        xsetroot -cursor_name watch
+        /sbin/shutdown -p now
+    else echo "Xmessage failed.";
+    fi
+    if [ -z "$(pgrep -U root xclock)" ]; then break; fi
+done
 ) &
+
+xclock -geometry -0+0 -strftime "%a. %d %b. %Y  %H:%M " &
