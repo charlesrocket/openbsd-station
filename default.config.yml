@@ -11,6 +11,9 @@ dotfiles_repo_local_destination: "~/git/dotfiles"
 dotfiles_home: "~"
 dotfiles_files:
   - .config/mc/ini
+  - .doom.d/config.el
+  - .doom.d/init.el
+  - .doom.d/packages.el
   - .gitconfig
   - .profile
   - .xsession
