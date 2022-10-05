@@ -16,6 +16,8 @@
     - role: pkg
       become: true
 
+    - role: common
+
     - role: sys
       become: true
 
@@ -23,8 +25,6 @@
       become: true
 
     - role: charlesrocket.dotfiles
-
-    - role: common
 
     - role: netrc
 
