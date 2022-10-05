@@ -32,6 +32,7 @@ pkg_packages:
   - direnv
   - editorconfig-core-c
   - fdupes
+  - feh
   - figlet
   - firefox-esr
   - fzf
@@ -44,7 +45,6 @@ pkg_packages:
   - htop
   - iftop
   - imv
-  - lemonbar
   - llvm
   - lynis
   - lynx
