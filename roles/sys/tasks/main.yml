@@ -19,3 +19,11 @@
     dest: /etc/X11/xenodm/Xsetup_0
     mode: "0755"
   when: xenodm
+
+- name: Configure xenodm | GiveConsole
+  ansible.builtin.blockinfile:
+    path: /etc/X11/xenodm/GiveConsole
+    block: |
+      pkill xclock
+      pkill xmessage
+  when: xenodm
