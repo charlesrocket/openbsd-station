@@ -12,6 +12,7 @@ dotfiles_home: "~"
 dotfiles_files:
   - .config/mc/ini
   - .gitconfig
+  - .profile
   - .xsession
   - .zshrc
 
