@@ -5,8 +5,7 @@
 
 (
 while true; do
-    xmessage -geometry +540-32 \
-        -buttons "[ Sleep ]":20,"[ Restart ]":21,"[ Shutdown ]":22 ""
+    xmessage -geometry +11-11 -buttons "sleep":20,"restart":21,"shutdown":22 ""
     ACTION=$?
     echo "Xmessage said: $ACTION"
     if   [ $ACTION -eq 20 ]; then /usr/sbin/zzz;
