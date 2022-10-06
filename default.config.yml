@@ -10,6 +10,7 @@ dotfiles_repo_force: true
 dotfiles_repo_local_destination: "~/git/dotfiles"
 dotfiles_home: "~"
 dotfiles_files:
+  - .config/awesome/rc.lua
   - .config/mc/ini
   - .doom.d/config.el
   - .doom.d/init.el
