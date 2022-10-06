@@ -1,0 +1,8 @@
+---
+- name: Configure doas
+  ansible.builtin.template:
+    src: doas.conf.j2
+    dest: /etc/doas.conf
+    mode: "0644"
+  when: test_run is undefined
+  become: true

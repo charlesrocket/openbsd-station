@@ -21,6 +21,8 @@
     groups: staff,wheel
     append: true
   become: true
+  notify:
+    - Configure doas
 
 - name: Check xenodm
   ansible.builtin.command: rcctl check xenodm
