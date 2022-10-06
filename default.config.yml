@@ -15,6 +15,7 @@ dotfiles_files:
   - .doom.d/init.el
   - .doom.d/packages.el
   - .gitconfig
+  - .kshrc
   - .profile
   - .xsession
   - .zshrc
