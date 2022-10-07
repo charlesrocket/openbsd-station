@@ -17,6 +17,7 @@
   ansible.builtin.blockinfile:
     path: /etc/X11/xenodm/GiveConsole
     block: |
+      pkill feh
       pkill xclock
       pkill xmessage
   when: xenodm

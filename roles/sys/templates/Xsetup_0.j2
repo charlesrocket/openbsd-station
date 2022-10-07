@@ -1,7 +1,15 @@
 #!/bin/sh
 
+LOGO=/etc/X11/xenodm/pixmaps/puffy-red.png
+
 /usr/X11R6/bin/xsetroot -solid \#000000
 /usr/X11R6/bin/xset fp+ /usr/local/share/font/spleen
+
+
+if [ -f $LOGO ]; then
+    /usr/local/bin/feh -B#000000 -g 320x320+11+0 -. \
+    -Z $LOGO &
+fi
 
 (
 while true; do
