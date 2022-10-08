@@ -21,3 +21,10 @@
       pkill xclock
       pkill xmessage
   when: xenodm
+
+- name: Configure xenodm | Logo
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/charlesrocket/misc-files/trunk/puffy-red.png
+    dest: /etc/X11/xenodm/pixmaps/puffy-red.png
+    mode: "0644"
+    checksum: sha256:e91d605201a759fa11e9ad62b1d247998e858032d8853043f677d5a0e0d9299e
