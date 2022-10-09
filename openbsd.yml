@@ -21,9 +21,6 @@
     - role: sys
       become: true
 
-    - role: charlesrocket.git
-      become: true
-
     - role: charlesrocket.dotfiles
 
     - role: netrc
