@@ -3,6 +3,10 @@
 [![Test](https://github.com/charlesrocket/openbsd-station/actions/workflows/test.yml/badge.svg)](https://github.com/charlesrocket/openbsd-station/actions/workflows/test.yml)
 ![screenshot](screenshot.gif)
 
-Ansible playbook for **OpenBSD**
+**OpenBSD** + **awesome**
+
+``` sh
+curl https://raw.githubusercontent.com/charlesrocket/openbsd-station/trunk/bootstrap | sh
+```
 
 🚧
