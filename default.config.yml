@@ -32,6 +32,7 @@ patch_system: true
 # Packages
 pkg_packages:
   - alacritty
+  - apl-fonts
   - awesome
   - clamav
   - cmake
