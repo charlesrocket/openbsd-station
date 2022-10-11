@@ -11,6 +11,7 @@ dotfiles_repo_local_destination: "~/git/dotfiles"
 dotfiles_home: "~"
 dotfiles_files:
   - .config/awesome/rc.lua
+  - .config/awesome/theme.lua
   - .config/fontconfig/fonts.conf
   - .config/gtk-3.0/settings.ini
   - .config/mc/ini
