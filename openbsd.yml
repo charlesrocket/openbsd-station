@@ -21,8 +21,8 @@
     - role: sys
       become: true
 
-    - role: charlesrocket.dotfiles
+    - role: charlesrocket.git
 
-    - role: netrc
+    - role: charlesrocket.dotfiles
 
     - role: emacs

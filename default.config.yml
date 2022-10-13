@@ -24,6 +24,11 @@ dotfiles_files:
   - .xsession
   - .zshrc
 
+# Git
+git_repo_local: "~/git"
+git_helper_destination: "~/bin"
+git_netrc_helper: true
+
 # Configuration
 xenodm: true
 
