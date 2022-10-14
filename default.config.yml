@@ -25,8 +25,8 @@ dotfiles_files:
   - .zshrc
 
 # Git
-git_repo_local: "~/git"
-git_helper_destination: "~/bin"
+git_repo_directory: "~/git"
+git_helper_directory: "~/bin"
 git_netrc_helper: true
 
 # Configuration
