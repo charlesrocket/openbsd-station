@@ -30,6 +30,7 @@ git_helper_directory: "~/bin"
 git_netrc_helper: true
 
 # Configuration
+doomemacs: true
 xenodm: true
 
 # Keep system up to date

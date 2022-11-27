@@ -1,4 +1,5 @@
 ---
 test_run: true
+doomemacs: false
 xenodm: true
 patch_system: false
