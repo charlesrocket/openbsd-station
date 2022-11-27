@@ -53,7 +53,7 @@ pkg_packages:
   - font-awesome
   - fzf
   - gawk
-  - gimp--
+# - gimp--
   - git
   - gmake
   - gnupg
