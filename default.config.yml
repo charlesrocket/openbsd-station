@@ -12,12 +12,12 @@ dotfiles_home: "~"
 dotfiles_files:
   - .config/awesome/rc.lua
   - .config/awesome/theme.lua
+  - .config/doom/config.el
+  - .config/doom/init.el
+  - .config/doom/packages.el
   - .config/fontconfig/fonts.conf
   - .config/gtk-3.0/settings.ini
   - .config/mc/ini
-  - .doom.d/config.el
-  - .doom.d/init.el
-  - .doom.d/packages.el
   - .gitconfig
   - .kshrc
   - .profile
