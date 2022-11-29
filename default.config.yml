@@ -33,9 +33,6 @@ git_netrc_helper: true
 doomemacs: true
 xenodm: true
 
-# Keep system up to date
-patch_system: true
-
 # Packages
 pkg_packages:
   - alacritty
