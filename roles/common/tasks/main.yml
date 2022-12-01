@@ -1,6 +1,7 @@
 ---
 - name: Apply all available system patches
   community.general.syspatch:
+  changed_when: false
   become: true
 
 - name: Create home directories
