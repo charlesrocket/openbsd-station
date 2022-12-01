@@ -1,8 +1,7 @@
 ---
-- name: Apply all available system patches
+- name: Apply system patches
   community.general.syspatch:
   changed_when: false
-  become: true
 
 - name: Configure xenodm | Xresources
   ansible.builtin.template:
