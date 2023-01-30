@@ -1,24 +1,25 @@
 name: Test
 
-on: [push]
+on:
+  pull_request:
+  push:
 
 jobs:
   test:
-    runs-on: macos-12
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Test playbook
-      id: test
-      uses: vmactions/openbsd-vm@v0
-      with:
-        usesh: true
-        prepare: |
-          pkg_add ansible git
-
-        run: |
-          git clone -b ${GITHUB_REF##*/} https://github.com/charlesrocket/openbsd-station /tmp/openbsd-station
-          cp /tmp/openbsd-station/test/config.yml /tmp/openbsd-station/config.yml
-          echo "permit nopass keepenv :wheel" > /etc/doas.conf
-          adduser -noconfig -group USER -batch foo wheel
-          chown -R foo:foo /tmp/openbsd-station
-          su -l foo -c 'cd /tmp/openbsd-station && test/idempotence_test.sh'
+      - uses: actions/checkout@v3
+      - uses: cross-platform-actions/action@v0.10.0
+        with:
+          operating_system: openbsd
+          architecture: x86-64
+          version: 7.2
+          shell: bash
+          run: |
+            pkg_add ansible git
+            git clone -b ${GITHUB_REF##*/} https://github.com/charlesrocket/openbsd-station /tmp/openbsd-station
+            cp /tmp/openbsd-station/test/config.yml /tmp/openbsd-station/config.yml
+            echo "permit nopass keepenv :wheel" > /etc/doas.conf
+            adduser -noconfig -group USER -batch foo wheel
+            chown -R foo:foo /tmp/openbsd-station
+            su -l foo -c 'cd /tmp/openbsd-station && test/idempotence_test.sh'
