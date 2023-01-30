@@ -14,7 +14,6 @@ jobs:
           operating_system: openbsd
           architecture: x86-64
           version: 7.2
-          shell: bash
           run: |
             pkg_add ansible git
             git clone -b ${GITHUB_REF##*/} https://github.com/charlesrocket/openbsd-station /tmp/openbsd-station
