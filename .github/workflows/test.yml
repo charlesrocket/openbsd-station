@@ -6,19 +6,20 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-12
     steps:
-      - uses: actions/checkout@v3
-      - uses: cross-platform-actions/action@v0.10.0
-        with:
-          operating_system: openbsd
-          architecture: x86-64
-          version: 7.2
-          run: |
-            doas pkg_add ansible git
-            doas echo "permit nopass keepenv :wheel" > /etc/doas.conf
-            git clone -b ${GITHUB_REF##*/} https://github.com/charlesrocket/openbsd-station /tmp/openbsd-station
-            cp /tmp/openbsd-station/test/config.yml /tmp/openbsd-station/config.yml
-            doas adduser -noconfig -group USER -batch foo wheel
-            doas chown -R foo:foo /tmp/openbsd-station
-            su -l foo -c 'cd /tmp/openbsd-station && test/idempotence_test.sh'
+    - uses: actions/checkout@v3
+    - name: Test playbook
+      id: test
+      uses: vmactions/openbsd-vm@v0
+      with:
+        usesh: true
+        prepare: |
+          pkg_add ansible git
+        run: |
+          git clone -b ${GITHUB_REF##*/} https://github.com/charlesrocket/openbsd-station /tmp/openbsd-station
+          cp /tmp/openbsd-station/test/config.yml /tmp/openbsd-station/config.yml
+          echo "permit nopass keepenv :wheel" > /etc/doas.conf
+          adduser -noconfig -group USER -batch foo wheel
+          chown -R foo:foo /tmp/openbsd-station
+          su -l foo -c 'cd /tmp/openbsd-station && test/idempotence_test.sh'
