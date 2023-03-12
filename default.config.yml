@@ -16,8 +16,8 @@ dotfiles_files:
   - .config/doom/packages.el
   - .config/fontconfig/fonts.conf
   - .config/gtk-3.0/settings.ini
+  - .config/git/config
   - .config/mc/ini
-  - .gitconfig
   - .kshrc
   - .profile
   - .xsession
