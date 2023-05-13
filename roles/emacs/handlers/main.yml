@@ -1,4 +1,8 @@
 ---
 - name: Synchronize Doom Emacs
   ansible.builtin.command: ~/.emacs.d/bin/doom sync
+  register: doom_output
   when: test_run is undefined
+  changed_when:
+    - '"No packages need to be installed" not in doom_output.stdout'
+    - '"No packages need rebuilding" not in doom_output.stdout'
