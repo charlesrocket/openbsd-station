@@ -1,6 +1,8 @@
+---
+
 name: Ansible Lint
 
-on:
+"on":
   pull_request:
   push:
   schedule:
@@ -10,8 +12,7 @@ jobs:
   build:
     name: Linting
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Lint Ansible Playbook
-      uses: ansible-community/ansible-lint-action@main
+      - uses: actions/checkout@v3
+      - name: Lint Ansible Playbook
+        uses: ansible-community/ansible-lint-action@main
