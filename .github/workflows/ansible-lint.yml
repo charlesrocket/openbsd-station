@@ -15,4 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Lint Ansible Playbook
-        uses: ansible-community/ansible-lint-action@main
+        uses: ansible/ansible-lint@main
