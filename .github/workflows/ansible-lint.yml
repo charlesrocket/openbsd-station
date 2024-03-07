@@ -9,10 +9,10 @@ name: Ansible Lint
     - cron: "0 11 13 */2 *"
 
 jobs:
-  build:
+  lint:
     name: Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Lint Ansible Playbook
         uses: ansible/ansible-lint@main
