@@ -69,7 +69,7 @@ pkg_packages:
   - pcsc-tools
   - pv
   - pwgen
-  - python3
+  - python
   - ripgrep
   - rust
   - scdoc
