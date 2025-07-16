@@ -21,13 +21,13 @@
 
 - name: Check xenodm
   ansible.builtin.command: rcctl check xenodm
-  register: xenodm_check
+  register: common_xenodm_check
   when: xenodm
-  failed_when: xenodm_check.rc == 2
+  failed_when: common_xenodm_check.rc == 2
   changed_when: false
 
 - name: Enable xenodm
   ansible.builtin.command: rcctl enable xenodm
-  when: xenodm_check.stdout != "xenodm(ok)"
+  when: common_xenodm_check.stdout != "xenodm(ok)"
   changed_when: false
   become: true
